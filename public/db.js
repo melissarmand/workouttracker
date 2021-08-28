@@ -7,7 +7,7 @@ request.onupgradeneeded = function (e) {
     console.log('Upgrade needed in IndexDB');
 
     const { oldVersion } = e;
-    const nerVersion = e/newVersion || db.nerVersion;
+    const newVersion = e.newVersion || db.newVersion;
 
     console.log(`DB Updated from version ${oldVersion} to ${newVersion}`);
 
