@@ -1,0 +1,26 @@
+{
+  "name": "workouttracker",
+  "version": "1.0.0",
+  "description": "For this assignment, I created a workout tracker. I was provided with the front end code and I created the back end of the app using Mongo database with a Mongoose schema and handled the routes with Express.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melissarmand/workouttracker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melissarmand/workouttracker/issues"
+  },
+  "homepage": "https://github.com/melissarmand/workouttracker#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.7",
+    "morgan": "^1.10.0",
+    "router": "^1.3.5"
+  }
+}
