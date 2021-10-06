@@ -1,10 +1,13 @@
 const router = require("express").Router();
-const Workout = require("../../models/workout.js");
+const Workout = require("../../models/Workout.js");
+const { Mongoose } = require("mongoose");
+const db = require('../../models');
+
 
 
 
 router.get ("/workouts", (req, res) => {
-    Workout.find()
+    db.Workout.find()
     .then(data => {
         res.json(data)
     })
@@ -25,9 +28,11 @@ router.get('/range', async (req, res) => {
 
 
 router.post("/workouts", (req, res) => {
+    const workout = req.body;
+    const result = db.Workout.create(workout);
     Workout.create({})
-   .then(data => 
-        res.json(data))
+   .then(result => 
+        res.json(result))
     .catch(err => {
         res.status(400).json(err);
     });
